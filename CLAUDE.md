@@ -1,7 +1,25 @@
 # Project memory — kevinmwomack.github.io
 
 > Notes for the next agent who opens this folder. Read this first.
-> This file is for project context; it is not linked from the public site.
+
+## ⚠️ Hard requirement: remove this file before merging to `main`
+
+**`CLAUDE.md` must be deleted from the branch before it merges into
+`main`.** It is internal project memory, not part of the public site,
+and Kevin does not want it served from
+https://kevinmwomack.github.io/CLAUDE.md.
+
+When the time comes to ship, do this on the working branch:
+
+```bash
+git rm CLAUDE.md
+git commit -m "Remove project memory before merge to main"
+git push
+```
+
+Then open the PR (or merge if it's already open) → `main`. Re-create
+this file on a fresh working branch in any future session — it is
+**branch-local context, never merge to main.**
 
 ## What this project is
 
@@ -12,13 +30,13 @@ branch, deploys automatically on push).
 
 ## Current state (last updated by previous agent session)
 
-- **Branch**: `initial-site-scaffold` (1 commit ahead of `main`)
+- **Branch**: `initial-site-scaffold` (multiple commits ahead of `main`)
 - **Status**: scaffold complete; awaiting Kevin's content
-- **Pushed to remote?** Likely yes — Kevin was asked to run
-  `git push -u origin initial-site-scaffold` from his terminal.
-  (The previous agent's sandbox couldn't reach GitHub directly.)
-  Verify with `git log origin/initial-site-scaffold..HEAD` — if empty,
-  the branch is up to date on the remote.
+- **Pushed to remote?** Yes — Kevin confirmed the push of the initial
+  scaffold + project-memory commits. Subsequent local commits (e.g.
+  the one that added this updated `CLAUDE.md`) still need to be
+  pushed. Run `git status` to see if you're ahead of
+  `origin/initial-site-scaffold`.
 
 ## Stack & decisions already made (don't re-litigate)
 
@@ -88,16 +106,26 @@ that needs real content. Specifically:
 6. **OG image** (optional) — for nicer link previews, drop a
    1200×630 image at `assets/images/og-card.png` and uncomment the
    `<meta property="og:image">` line in `index.html`.
+7. **Remove `CLAUDE.md`** as the final commit before merging to
+   `main` — see the warning at the top of this file. Don't skip
+   this step.
 
 ## Going live
 
 When Kevin's content is in:
 
 ```bash
+# 1. Add real content
 git add -A                      # or specific files
 git commit -m "Add real content"
 git push                        # to initial-site-scaffold
-# Then on GitHub:
+
+# 2. Final commit: remove project memory before merge
+git rm CLAUDE.md
+git commit -m "Remove project memory before merge to main"
+git push
+
+# 3. On GitHub:
 #  - Open a PR: initial-site-scaffold → main
 #  - Merge it
 # Pages auto-deploys to https://kevinmwomack.github.io within seconds.
