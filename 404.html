@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found · Kevin Womack</title>
+  <meta name="description" content="Sorry, that page could not be found." />
+
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+  />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="/">
+        Kevin Womack<span class="dot">.</span>
+      </a>
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="nav__list" id="primary-nav">
+        <li><a class="nav__link" href="/">Home</a></li>
+        <li><a class="nav__link" href="/about.html">About</a></li>
+        <li>
+          <!-- TODO: replace href with your real Drive share URL -->
+          <a class="nav__link" href="https://docs.google.com/document/d/1sYAlOObtr9FUxZ9qVSSgNuxmpCNK3eEFx9vkXBLJZCw/export?format=pdf"
+             target="_blank" rel="noopener">
+            Résumé
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li><a class="nav__link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="notfound">
+      <p class="notfound__code">404</p>
+      <h1>This page wandered off.</h1>
+      <p class="notfound__msg">
+        The link might be broken, or the page may have moved.
+        Let's get you back on track.
+      </p>
+      <p>
+        <a class="btn" href="/">Back to home</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-meta">
+        © <span id="year">2026</span> Kevin Womack
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

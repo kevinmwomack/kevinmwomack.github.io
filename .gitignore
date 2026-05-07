@@ -1,0 +1,19 @@
+# Project memory for Claude sessions — kept locally, never committed,
+# never served by GitHub Pages. See CLAUDE.md for context.
+CLAUDE.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Just in case Kevin ever pulls in node tooling
+node_modules/
+
+# Cowork sandbox cruft from rename-instead-of-delete workaround.
+# Safe to vacuum from local terminal: rm -rf .resume.html.removed assets/documents
+.resume.html.removed
+assets/documents/
