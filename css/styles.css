@@ -193,6 +193,22 @@ section + section { margin-top: var(--section-spacing); }
   border-bottom-color: var(--color-red);
 }
 
+/* External nav link (e.g. résumé hosted on Google Drive) */
+.nav__link[target="_blank"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.nav__link[target="_blank"] svg {
+  width: 0.85em;
+  height: 0.85em;
+  opacity: 0.65;
+  transition: opacity var(--transition);
+}
+.nav__link[target="_blank"]:hover svg {
+  opacity: 1;
+}
+
 @media (max-width: 720px) {
   .nav__toggle { display: inline-flex; }
   .nav__list {
